@@ -1,6 +1,11 @@
 <h4>Ajout d'une nouvelle dose</h4>
 <%= simple_form_for [@cocktail, dose] do |f| %>
-  <%= f.association :ingredient %>
+  <%= f.association :ingredient, collection: Ingredient.all, input_html: { class: 'select2' } %>
   <%= f.input :description %>
   <%= f.button :submit, class: 'btn-success' %>
 <% end %>
+
+<%#= select_tag "timezone", options_from_collection_for_select(
+      Ingredient.all,
+      :name, :name),
+      class: 'select2' %>
