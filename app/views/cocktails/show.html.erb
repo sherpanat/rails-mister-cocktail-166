@@ -24,4 +24,7 @@
   </div>
 </div>
 
-<%= link_to 'Ajoutez une dose', new_cocktail_dose_path(@cocktail), class: 'btn btn-danger' %>
+<%#= link_to 'Ajoutez une dose', new_cocktail_dose_path(@cocktail), class: 'btn btn-danger' %>
+<%= render 'doses/form', dose: @dose %>
+
+<%= link_to 'Retour à la liste', cocktails_path, class: 'btn btn-warning' %>
